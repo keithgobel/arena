@@ -2,10 +2,92 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="arena.css" rel="stylesheet" />
     <meta charset="utf-8" />
-    <title></title>
+    <title>Arena Stats</title>
+    
 </head>
+
 <body>
+   
+    <header class="container">
+        <h1>Arena Stats</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-2">
+                <h4>
+                    <label for="playerId"><b>Player Id</b></label>
+                </h4>    
+            </div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <h4>
+                    <label for="playerClass"><b>Class</b></label>
+                </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-2">
+                <input name="playerId" class="form-control" id="playerId" type="text" />                               
+            </div>
+            <div class="col-sm-3 col-sm-offset-2">
+                <select class="form-control" id="playerClass">
+                    <option>Death Knight</option>
+                    <option>Druid</option>
+                    <option>Hunter</option>
+                    <option>Mage</option>
+                    <option>Monk</option>
+                    <option>Paladin</option>
+                    <option>Priest</option>
+                    <option>Rogue</option>
+                    <option>Shaman</option>
+                    <option>Warlock</option>
+                    <option>Warrior</option>
+                </select>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-2">
+                <h4>
+                    <label for="charName"><b>Character Name</b></label>
+                </h4>
+            </div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <h4>
+                    <label for="classSpec"><b>Class Spec</b></label>
+                </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-2">
+                <input name="charName" class="form-control" id="charName" type="text" />
+            </div>
+            <div class="col-sm-3 col-sm-offset-2">
+                <select class="form-control" id="classSpec">
+                    <option>Frost</option>
+                    <option>Unholy</option>
+                    <option>Blood</option>
+                </select>
+            </div>
+        </div>
+        <br/>
+        <div class='row'>
+            <div class='col-sm-3 col-sm-offset-9'>
+                <input type="submit" class="btn" value="Save" />
+            </div>
+        </div>
+
+    </div>
+        
+
+
+
+
 
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+ 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="arena.css" rel="stylesheet" />
     <meta charset="utf-8" />
@@ -36,6 +37,7 @@
             <div class="col-sm-3 col-sm-offset-2">
                 <select class="form-control" id="playerClass">
                     <option>Death Knight</option>
+                    <option>Demon Hunter</option>
                     <option>Druid</option>
                     <option>Hunter</option>
                     <option>Mage</option>
@@ -46,6 +48,7 @@
                     <option>Shaman</option>
                     <option>Warlock</option>
                     <option>Warrior</option>
+                    
                 </select>
             </div>
         </div>
@@ -83,11 +86,59 @@
         </div>
 
     </div>
+   
         
+   
 
 
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //alert("Hello");
+        });
+        
+        $('#playerClass').on('change', function () {
+            var classType = $(this).val();
+            switch (classType) {
+                case "Death Knight":
+                    $('#classSpec').html('<option>Frost</option><option>Unholy</option><option>Blood</option>')
+                    break;
+            }
+            if (classType == "Mage") {
+                $('#classSpec').html('<option>Frost</option><option>Fire</option><option>Arcane</option>');
+                           }
+            else if (classType == "Shaman") {
+                $('#classSpec').html('<option>Restoration</option><option>Elemental</option><option>Enhancement</option>');
+            }
+            else if (classType == "Paladin") {
+                $('#classSpec').html('<option>Protection</option><option>Holy</option><option>Retribution</option>');
+            }
+            else if (classType == "Warrior") {
+                $('#classSpec').html('<option>Arms</option><option>Fury</option><option>Protection</option>');
+            }
+            else if (classType == "Monk") {
+                $('#classSpec').html('<option>Brewmaster</option><option>Mistweaver</option><option>Windwalker</option>');
+            }
+            else if (classType == "Warlock") {
+                $('#classSpec').html('<option>Affliction</option><option>Demonology</option><option>Destruction</option>');
+            }
+            else if (classType == "Priest") {
+                $('#classSpec').html('<option>Holy</option><option>Discipline</option><option>Shadow</option>');
+            }
+            else if (classType == "Hunter") {
+                $('#classSpec').html('<option>Beast Mastery</option><option>Marksmanship</option><option>Survival</option>');
+            }
+            else if (classType == "Rogue") {
+                $('#classSpec').html('<option>Assassination</option><option>Outlaw</option><option>Subtlety</option>');
+            }
+            else if (classType == "Druid") {
+                $('#classSpec').html('<option>Restoration</option><option>Guardian</option><option>Feral</option>><option>Balance</option>');
+            }
+            else if (classType == "Demon Hunter") {
+                $('#classSpec').html('<option>Havoc</option><option>Vengeance</option>');
+            }
+        });
+    </script>
 </body>
 </html>
